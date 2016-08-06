@@ -1,8 +1,8 @@
 var React = require('react');
 
-var WeatherMessage = ({temp, location}) => {
+var WeatherMessage = ({location, temp}) => {
   return (
-    <h3 className="text-center">It is it {temp} in {location}.</h3>
+    <h3 className="text-center">It is it {temp}°F in {location}.</h3>
   )
 }
 module.exports = WeatherMessage;

@@ -11,7 +11,10 @@ module.exports = {
       if (res.data.cod && res.data.message) {
         throw new Error(res.data.message);
       } else {
-        return res.data.main.temp;
+        return {
+          location: `${res.data.name}, ${res.data.sys.country}`,
+          temp: Math.floor(res.data.main.temp)
+        }
       }
     }, function (res) {
       throw new Error(res.data.message);
